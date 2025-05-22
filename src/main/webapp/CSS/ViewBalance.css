@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+	font-family: sans-serif;
+	background: #f4f6f8;
+	padding: 2rem;
+}
+
+.balance-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1rem;
+}
+
+.acct-card {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.acct-card h2 {
+	color: #004a99;
+	margin-bottom: 0.5rem;
+}

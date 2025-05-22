@@ -1,0 +1,102 @@
+/* Reset & Base */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	background: #f4f6f8;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Site Header */
+.site-header {
+	background: #004a99;
+	color: #fff;
+	padding: 1rem 0;
+	text-align: center;
+}
+
+.site-header h1 {
+	font-size: 2rem;
+}
+
+/* Top Navigation */
+.dash-header {
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dash-nav {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 1rem;
+}
+
+.logout-btn {
+	background: #e74c3c;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background 0.2s;
+}
+
+.logout-btn:hover {
+	background: #c0392b;
+}
+
+/* Dashboard Container */
+.dash-container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.5rem;
+	padding: 0 1rem;
+}
+
+/* Cards */
+.card {
+	background: #fff;
+	border-radius: 0.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+	font-size: 1.25rem;
+	color: #004a99;
+	margin-bottom: 1rem;
+}
+
+.card ul {
+	list-style: none;
+}
+
+.card ul li {
+	margin-bottom: 0.75rem;
+}
+
+.card ul li a {
+	color: #0066cc;
+	font-weight: 500;
+}
+
+.card ul li a:hover {
+	text-decoration: underline;
+}

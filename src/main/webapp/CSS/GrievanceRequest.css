@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* style.css */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #f0f4f8;
+	margin: 0;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start; /* ensure container starts at top */
+	min-height: 100vh;
+}
+
+.container {
+	background: #fff;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+h2 {
+	margin-bottom: 1rem;
+	color: #333;
+	text-align: center;
+}
+
+/* Error box */
+.error {
+	background: #ffe6e6;
+	color: #d8000c;
+	padding: 0.75rem;
+	border: 1px solid #d8000c;
+	border-radius: 6px;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+/* Form inputs */
+input[type="text"], textarea {
+	width: 100%;
+	padding: 0.75rem;
+	margin-top: 0.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 1rem;
+	transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, textarea:focus {
+	outline: none;
+	border-color: #007acc;
+}
+
+/* Button */
+button {
+	width: 100%;
+	padding: 0.75rem;
+	background: #007acc;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+button:hover {
+	background: #005fa3;
+}
+
+/* Table for “My Grievances” */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+thead {
+	background: #007acc;
+	color: #fff;
+}
+
+thead th {
+	padding: 0.75rem;
+	text-align: left;
+}
+
+tbody tr:nth-child(even) {
+	background: #f7f9fc;
+}
+
+tbody td {
+	padding: 0.75rem;
+	border-bottom: 1px solid #e1e4e8;
+}
+
+tbody tr:hover {
+	background: #e9f1fb;
+}
+/* widen only the Status dropdown */
+table tbody tr td form select[name="status"] {
+	width: 110px; /* pick whatever width you need */
+	max-width: 100%; /* won’t exceed its cell */
+	flex: none; /* when inside a flex container, don’t grow/shrink */
+}
+
+
+
+/* Notice message */
+.message {
+	background: #e7f5ff;
+	color: #084298;
+	padding: 0.75rem;
+	border: 1px solid #b6d4fe;
+	border-radius: 6px;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+/* Ensure table sits nicely under the header */
+.container table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+select {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 1rem;
+	transition: border-color 0.2s;
+}
+
+select:focus {
+	outline: none;
+	border-color: #007acc;
+}
+
+/* Override form‐wide button to be auto‐width for updates */
+button {
+	padding: 0.5rem 1rem;
+	background: #007acc;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+button:hover {
+	background: #005fa3;
+}

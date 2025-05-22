@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body background & font */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #f4f7fa;
+	color: #333;
+	line-height: 1.6;
+	padding: 2rem;
+}
+
+/* Card container */
+.card {
+	background: #ffffff;
+	max-width: 900px;
+	margin: 0 auto 2rem;
+	padding: 1.5rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading */
+.card h2 {
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+	color: #2c3e50;
+	text-align: center;
+}
+
+/* Table styling */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Table header */
+thead {
+	background: linear-gradient(90deg, #4b79a1, #283e51);
+	color: #fff;
+}
+
+thead th {
+	padding: 0.75rem 1rem;
+	text-align: left;
+	font-weight: 600;
+	font-size: 0.9rem;
+	letter-spacing: 0.03em;
+}
+
+/* Table body rows */
+tbody tr {
+	background: #fff;
+	transition: background 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+	background: #f9fbfc;
+}
+
+tbody tr:hover {
+	background: #e8f1f7;
+}
+
+/* Table cells */
+td {
+	padding: 0.75rem 1rem;
+	font-size: 0.9rem;
+	border-bottom: 1px solid #e1e8ed;
+}
+
+/* Status badges */
+td:nth-child(6) {
+	text-transform: capitalize;
+}
+
+td:nth-child(6)[data-status="approved"] {
+	color: #155724;
+	background: #d4edda;
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.4rem;
+}
+
+td:nth-child(6)[data-status="pending"] {
+	color: #856404;
+	background: #fff3cd;
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.4rem;
+}
+
+td:nth-child(6)[data-status="rejected"] {
+	color: #721c24;
+	background: #f8d7da;
+	padding: 0.3rem 0.6rem;
+	border-radius: 0.4rem;
+}
+
+/* Responsive */
+@media ( max-width : 600px) {
+	.card {
+		padding: 1rem;
+	}
+	thead {
+		display: none;
+	}
+	tbody tr {
+		display: block;
+		margin-bottom: 1rem;
+	}
+	tbody td {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem;
+		border: none;
+		border-bottom: 1px solid #e1e8ed;
+	}
+	tbody td::before {
+		content: attr(data-label);
+		font-weight: 600;
+		flex: 1;
+	}
+}

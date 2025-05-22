@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* AddBeneficiary.css - Bluish theme for Add Beneficiary page */
+
+:root {
+    --primary-color: #1e3a8a;   /* Dark Blue */
+    --secondary-color: #3b82f6; /* Bright Blue */
+    --accent-color: #60a5fa;    /* Light Blue */
+    --light-bg: #f0faff;
+    --dark-text: #1f2937;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Global resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Site header */
+.site-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-inner h1 {
+    font-size: 1.8rem;
+}
+
+/* Dashboard header */
+.dash-header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0.75rem 2rem;
+}
+.dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dash-nav span {
+    font-size: 1rem;
+}
+.logout-btn {
+    background: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background 0.3s;
+}
+.logout-btn:hover {
+    background: var(--accent-color);
+}
+
+/* Main container */
+.dash-container {
+    flex: 1;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.dash-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Error message styling */
+.c\:if p {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+select {
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+button[type="submit"] {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button[type="submit"]:hover {
+    background: var(--accent-color);
+}
+
+/* Back link */
+a[href*="CustomerDashboard.jsp"] {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+a[href*="CustomerDashboard.jsp"]:hover {
+    color: var(--secondary-color);
+}
+
+/* Footer spacing */
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #777;
+}

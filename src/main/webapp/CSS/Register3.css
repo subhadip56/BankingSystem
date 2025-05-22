@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+
+
+h1 {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 28px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    font-size: 14px;
+    color: #555;
+    margin-top: 40px;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+.register-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.register3-form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Adequate gap between sections */
+}
+
+
+.radio-group {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 15px; /* Gap between rows */
+    margin-top: 10px;
+}
+
+.radio-row {
+    display: flex;
+    justify-content: flex-start; /* Align two radio buttons per row */
+    gap: 40px; /* Adequate gap between radio buttons in the same row */
+}
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 15px; /* Gap between rows */
+    margin-top: 10px;
+}
+
+.checkbox-row {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 40px; 
+}
+
+
+
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px; 	
+    color: #2c3e50;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 20px; /* Adequate gap before submit button */
+}
+
+/* first .radio-row in the group, second <label> inside it */
+.radio-group .radio-row:first-of-type label:nth-of-type(2) {
+  margin-left: 62px;
+}
+
+/* Internet Banking: first .checkbox-row, second label */
+.checkbox-group .checkbox-row:nth-of-type(1) label:nth-of-type(2) {
+  margin-left: 53px;
+}
+
+/* E-Statement: third .checkbox-row, second label */
+.checkbox-group .checkbox-row:nth-of-type(3) label:nth-of-type(2) {
+  margin-left: 22px;
+}
+
+
+.form-button:hover {
+    background-color: #2980b9;
+}

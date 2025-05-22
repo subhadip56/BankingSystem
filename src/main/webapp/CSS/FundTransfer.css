@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* FundTransfer.css - Bluish, compact styling for Fund Transfer page */
+
+:root {
+    --primary-color: #1e3a8a;   /* Dark Blue */
+    --secondary-color: #3b82f6; /* Bright Blue */
+    --accent-color: #60a5fa;    /* Light Blue */
+    --light-bg: #f0faff;
+    --card-bg: #ffffff;
+    --border-radius: 0.5rem;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    --text-dark: #1f2937;
+    --text-light: #ffffff;
+    --input-border: #cbd5e1;
+}
+
+/* Global reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Site header */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.site-header h1 { font-size: 1.8rem; }
+
+/* Dashboard header */
+.dash-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--input-border);
+    padding: 0.75rem 2rem;
+}
+.dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dash-nav span { font-size: 1rem; }
+.logout-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.logout-btn:hover { background-color: var(--accent-color); }
+
+/* Main content container */
+.dash-container {
+    flex: 1;
+    max-width: 650px;
+    margin: 2rem auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.dash-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Error message */
+.c\:if p {
+    color: #e53e3e;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+/* Info message */
+.dash-container > p {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+.dash-container > a {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.dash-container > a:hover { color: var(--primary-color); }
+
+/* Compact Form styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1rem;  /* Reduced spacing between fields */
+}
+label {
+    font-weight: 600;
+    display: inline-block;
+}
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+select:focus, input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover { background-color: var(--primary-color); }
+
+/* Back to dashboard link */
+a[href*="CustomerDashboard.jsp"] {
+    display: block;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+a[href*="CustomerDashboard.jsp"]:hover { color: var(--secondary-color); }
+
+/* Responsive */
+@media (min-width: 768px) {
+    .dash-container { padding: 2.5rem; }
+    .dash-container h2 { font-size: 1.8rem; }
+}

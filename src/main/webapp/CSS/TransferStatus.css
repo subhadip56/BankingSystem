@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* Customer_dashboard.css - Elegant bluish theme for Transfer Status page */
+
+:root {
+    --primary-color: #1e3a8a;   /* Dark Blue */
+    --secondary-color: #3b82f6; /* Bright Blue */
+    --accent-color: #60a5fa;    /* Light Blue */
+    --light-bg: #f7fafe;
+    --card-bg: #ffffff;
+    --border-radius: 0.5rem;
+    --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    --text-dark: #1f2937;
+    --text-light: #ffffff;
+    --border-color: #e2e8f0;
+    --hover-bg: #e0efff;
+}
+
+/* Global reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Site header */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-inner h1 {
+    font-size: 1.8rem;
+}
+
+/* Dashboard header */
+.dash-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 2rem;
+}
+.dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dash-nav span {
+    font-size: 1rem;
+}
+.logout-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.logout-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Main container */
+.dash-container {
+    flex: 1;
+    max-width: 90%;
+    margin: 2rem auto;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.dash-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+/* Error message */
+.c\:if p {
+    text-align: center;
+    color: #e53e3e;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+th, td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: var(--light-bg);
+}
+tr:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Back link */
+a[href*="CustomerDashboard.jsp"] {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+a[href*="CustomerDashboard.jsp"]:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dash-container {
+        padding: 1rem;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+    .dash-nav span {
+        font-size: 0.9rem;
+    }
+}

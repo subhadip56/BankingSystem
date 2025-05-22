@@ -1,0 +1,88 @@
+/* Reset & Base */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	background: #f4f6f8;
+	padding: 2rem;
+}
+
+/* Centered form container with fixed width */
+.form-container {
+	max-width: 400px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	color: #004a99;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+label {
+	display: block;
+	margin-top: 1rem;
+	font-weight: 500;
+	color: #333;
+}
+
+/* Let browsers render native dropdown arrow */
+select {
+	width: 100%;
+	padding: 0.75rem;
+	margin-top: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+	appearance: auto;
+	background-color: #fff;
+}
+
+input[type="number"] {
+	width: 100%;
+	padding: 0.75rem;
+	margin-top: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+select:focus, input[type="number"]:focus {
+	border-color: #0066cc;
+	outline: none;
+}
+
+button {
+	width: 100%;
+	padding: 0.75rem;
+	margin-top: 1.5rem;
+	background: #0066cc;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+button:hover {
+	background: #005bb5;
+}
+
+.info {
+	margin-top: 1rem;
+	padding: 0.75rem;
+	background: #e6f7e6;
+	border: 1px solid #b3e6b3;
+	border-radius: 4px;
+	color: #2d7a2d;
+	text-align: center;
+}

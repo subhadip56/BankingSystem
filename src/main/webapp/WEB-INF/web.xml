@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+                        https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	version="6.0">
+
+	<!-- session timeout in minutes -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<!-- USER REGISTRATION STEPS -->
+	<servlet>
+		<servlet-name>RegisterStep1Servlet</servlet-name>
+		<servlet-class>com.bank.servlet.RegisterStep1Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterStep1Servlet</servlet-name>
+		<url-pattern>/RegisterStep1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterStep2Servlet</servlet-name>
+		<servlet-class>com.bank.servlet.RegisterStep2Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterStep2Servlet</servlet-name>
+		<url-pattern>/RegisterStep2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterCustomerServlet</servlet-name>
+		<servlet-class>com.bank.servlet.RegisterCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterCustomerServlet</servlet-name>
+		<url-pattern>/RegisterStep3</url-pattern>
+	</servlet-mapping>
+
+	<!-- TRACK REGISTRATION STATUS -->
+	<servlet>
+		<servlet-name>TrackStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.TrackStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TrackStatusServlet</servlet-name>
+		<url-pattern>/TrackStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- LOGIN & LOGOUT -->
+	<servlet>
+		<servlet-name>CustomerLoginServlet</servlet-name>
+		<servlet-class>com.bank.servlet.CustomerLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerLoginServlet</servlet-name>
+		<url-pattern>/CustomerLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<servlet-class>com.bank.servlet.AdminLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLoginServlet</servlet-name>
+		<url-pattern>/AdminLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmployeeLoginServlet</servlet-name>
+		<servlet-class>com.bank.servlet.EmployeeLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeLoginServlet</servlet-name>
+		<url-pattern>/EmployeeLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.bank.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- ADMIN / EMPLOYEE MANAGEMENT -->
+	<servlet>
+		<servlet-name>CreateEmployeeServlet</servlet-name>
+		<servlet-class>com.bank.servlet.CreateEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateEmployeeServlet</servlet-name>
+		<url-pattern>/CreateEmployeeServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ManageEmployeesServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ManageEmployeesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManageEmployeesServlet</servlet-name>
+		<url-pattern>/ManageEmployeesServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditEmployeeServlet</servlet-name>
+		<servlet-class>com.bank.servlet.EditEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditEmployeeServlet</servlet-name>
+		<url-pattern>/EditEmployeeServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateEmployeeServlet</servlet-name>
+		<servlet-class>com.bank.servlet.UpdateEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateEmployeeServlet</servlet-name>
+		<url-pattern>/UpdateEmployeeServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteEmployeeServlet</servlet-name>
+		<servlet-class>com.bank.servlet.DeleteEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteEmployeeServlet</servlet-name>
+		<url-pattern>/DeleteEmployeeServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- CUSTOMER APPROVAL -->
+	<servlet>
+		<servlet-name>ViewPendingCustomersServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewPendingCustomersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPendingCustomersServlet</servlet-name>
+		<url-pattern>/ViewPendingCustomersServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessCustomerServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ProcessCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessCustomerServlet</servlet-name>
+		<url-pattern>/ProcessCustomerServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- ACCOUNT OVERVIEW -->
+	<servlet>
+		<servlet-name>ViewBalanceServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewBalanceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewBalanceServlet</servlet-name>
+		<url-pattern>/ViewBalanceServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MiniStatementServlet</servlet-name>
+		<servlet-class>com.bank.servlet.MiniStatementServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MiniStatementServlet</servlet-name>
+		<url-pattern>/MiniStatementServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- DEPOSIT & WITHDRAWAL -->
+	<servlet>
+		<servlet-name>SubmitDepositServlet</servlet-name>
+		<servlet-class>com.bank.servlet.SubmitDepositServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitDepositServlet</servlet-name>
+		<url-pattern>/SubmitDepositServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SubmitWithdrawalServlet</servlet-name>
+		<servlet-class>com.bank.servlet.SubmitWithdrawalServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitWithdrawalServlet</servlet-name>
+		<url-pattern>/SubmitWithdrawalServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewPendingTransactionsServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewPendingTransactionsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPendingTransactionsServlet</servlet-name>
+		<url-pattern>/ViewPendingTransactionsServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ApproveTransactionServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ApproveTransactionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApproveTransactionServlet</servlet-name>
+		<url-pattern>/ApproveTransactionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DepositPageServlet</servlet-name>
+		<servlet-class>com.bank.servlet.DepositPageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DepositPageServlet</servlet-name>
+		<url-pattern>/DepositPageServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WithdrawPageServlet</servlet-name>
+		<servlet-class>com.bank.servlet.WithdrawPageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WithdrawPageServlet</servlet-name>
+		<url-pattern>/WithdrawPageServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WithdrawServlet</servlet-name>
+		<servlet-class>com.bank.servlet.WithdrawServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WithdrawServlet</servlet-name>
+		<url-pattern>/WithdrawServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 1. Show loan application form -->
+	<servlet>
+		<servlet-name>LoanRequestServlet</servlet-name>
+		<servlet-class>com.bank.servlet.LoanRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoanRequestServlet</servlet-name>
+		<url-pattern>/LoanRequestServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 2. Handle form submit -->
+	<servlet>
+		<servlet-name>ApplyLoanServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ApplyLoanServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApplyLoanServlet</servlet-name>
+		<url-pattern>/ApplyLoanServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 3. List this customer's loan status -->
+	<servlet>
+		<servlet-name>LoanStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.LoanStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoanStatusServlet</servlet-name>
+		<url-pattern>/LoanStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 4. Admin: view all pending loan applications -->
+	<servlet>
+		<servlet-name>ViewPendingLoansServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewPendingLoansServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPendingLoansServlet</servlet-name>
+		<url-pattern>/ViewPendingLoansServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 5. Admin: approve or reject a loan -->
+	<servlet>
+		<servlet-name>ApproveLoanServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ApproveLoanServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApproveLoanServlet</servlet-name>
+		<url-pattern>/ApproveLoanServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- FD / RD Request servlet -->
+	<servlet>
+		<servlet-name>FDRequestServlet</servlet-name>
+		<servlet-class>com.bank.servlet.FDRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FDRequestServlet</servlet-name>
+		<url-pattern>/FDRequestServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- FD / RD Status (customer view) -->
+	<servlet>
+		<servlet-name>FDStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.FDStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FDStatusServlet</servlet-name>
+		<url-pattern>/FDStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Admin: view pending FD/RD -->
+	<servlet>
+		<servlet-name>ViewPendingFDServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewPendingFDServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPendingFDServlet</servlet-name>
+		<url-pattern>/ViewPendingFDServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Admin: approve/reject FD/RD -->
+	<servlet>
+		<servlet-name>UpdateFDStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.UpdateFDStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateFDStatusServlet</servlet-name>
+		<url-pattern>/UpdateFDStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ChangePasswordServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ChangePasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordServlet</servlet-name>
+		<url-pattern>/ChangePasswordServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Customer: submit a grievance -->
+	<servlet>
+		<servlet-name>GrievanceRequestServlet</servlet-name>
+		<servlet-class>com.bank.servlet.GrievanceRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GrievanceRequestServlet</servlet-name>
+		<url-pattern>/GrievanceRequestServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Customer: view own grievances -->
+	<servlet>
+		<servlet-name>GrievanceStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.GrievanceStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GrievanceStatusServlet</servlet-name>
+		<url-pattern>/GrievanceStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Admin: manage all grievances -->
+	<servlet>
+		<servlet-name>AdminGrievanceServlet</servlet-name>
+		<servlet-class>com.bank.servlet.AdminGrievanceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminGrievanceServlet</servlet-name>
+		<url-pattern>/AdminGrievanceServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Fund Transfer Servlet -->
+	<servlet>
+		<servlet-name>FundTransferServlet</servlet-name>
+		<servlet-class>com.bank.servlet.FundTransferServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FundTransferServlet</servlet-name>
+		<url-pattern>/FundTransferServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Approve Transfer Servlet -->
+	<servlet>
+		<servlet-name>ApproveFundTransferServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ApproveFundTransferServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApproveFundTransferServlet</servlet-name>
+		<url-pattern>/ApproveFundTransferServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Reject Transfer Servlet -->
+	<servlet>
+		<servlet-name>RejectFundTransferServlet</servlet-name>
+		<servlet-class>com.bank.servlet.RejectFundTransferServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RejectFundTransferServlet</servlet-name>
+		<url-pattern>/RejectFundTransferServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Beneficiary Servlets -->
+	<servlet>
+		<servlet-name>AddBeneficiaryServlet</servlet-name>
+		<servlet-class>com.bank.servlet.AddBeneficiaryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddBeneficiaryServlet</servlet-name>
+		<url-pattern>/AddBeneficiaryServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewBeneficiariesServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewBeneficiariesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewBeneficiariesServlet</servlet-name>
+		<url-pattern>/ViewBeneficiariesServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewPendingFundTransfersServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ViewPendingFundTransfersServlet</servlet-class>
+	</servlet>
+
+	<!-- Servlet Mapping for ViewPendingFundTransfersServlet -->
+	<servlet-mapping>
+		<servlet-name>ViewPendingFundTransfersServlet</servlet-name>
+		<url-pattern>/ViewPendingFundTransfersServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlet Definition for ProcessFundTransferServlet -->
+	<servlet>
+		<servlet-name>ProcessFundTransferServlet</servlet-name>
+		<servlet-class>com.bank.servlet.ProcessFundTransferServlet</servlet-class>
+	</servlet>
+
+	<!-- Servlet Mapping for ProcessFundTransferServlet -->
+	<servlet-mapping>
+		<servlet-name>ProcessFundTransferServlet</servlet-name>
+		<url-pattern>/ProcessFundTransferServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TransferStatusServlet</servlet-name>
+		<servlet-class>com.bank.servlet.TransferStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TransferStatusServlet</servlet-name>
+		<url-pattern>/TransferStatusServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
