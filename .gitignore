@@ -1,0 +1,14 @@
+# macOS system file
+.DS_Store
+
+# Eclipse-specific folders
+.settings/
+build/
+
+# Java compiled class files
+*.class
+
+# IntelliJ IDEA files (if you ever use it)
+.idea/
+*.iml
+
