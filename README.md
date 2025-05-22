@@ -175,4 +175,3 @@ Follow these steps to run the project locally:
 
 This Banking Management System is designed to be a realistic, educational web application. It demonstrates a full cycle of banking operations with multiple user roles and approval workflows. Feel free to explore the code, add new features, or improve the UI/UX. If you have questions or encounter issues, review the code comments and configuration, or reach out in the project’s issue tracker.
 
-Happy coding and welcome to a simulated banking environment!
