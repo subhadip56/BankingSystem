@@ -1,3 +1,4 @@
+-- Insert some demo data for admin
 -- Insert default admin users
 INSERT INTO admin (username, password_hash, full_name, email, role) VALUES
 ('arvind.kumar', 'admin@123', 'Arvind Kumar', 'arvind.kumar@securebank.in', 'Admin'),
